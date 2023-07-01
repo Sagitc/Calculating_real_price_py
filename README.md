@@ -1,4 +1,4 @@
-# Calculating_real_price_py
+# Calculating_taxes_invoice
   Se você está tendo dificuldade para calcular os impostos que vem sobre o produto, ou se quer saber quantos porcentos de desconto ou acréscimo foi dado na nota fiscal,
 esse é o programa certo para você.
   Esse programa primeiro irá calcular a porcentagem de desconto/acréscimo que está na nota fiscal e depois fornecer o preço real dos produtos já com o desconto/acréscimo.
