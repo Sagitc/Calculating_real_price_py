@@ -5,9 +5,7 @@ def clearTerminal():
 
 def apresentation():
     clearTerminal()
-    print('Bem-vindo ao programa que calcula o valor real da nota e dos produtos')
-    print('Troque "," por "."')
-    print('para sair do programa digite "sair".')
+    print('-- Cálculo de taxas --')
 
 def exitProgram(answer):
     if answer == "sair":
@@ -22,19 +20,30 @@ def resultCalculation(valor_produtos, valor_nota):
             result = ((float(valor_nota) * 100)/float(valor_produtos))-100
             return result
         else:
-            return print('\nNão houve desconto ou acréscimo nessa nota.')
-    except:
-        return print('\nTroque "," por "."')
+            print('\nNão houve desconto ou acréscimo nessa nota.')
+            input('\nPressione <enter> para continuar.')
+            return
+    except ValueError:
+        print('\nAo invés da vírgula use o ponto, "," -> "."')
+        input('\nPressione <enter> para continuar.')
+        return 
+    except Exception:
+        print('\nErro desconhecido.')
+        input('\nPressione <enter> para continuar.')
+        return
 
 def taxesProducts(preco_produto, quantidade_produto, diferenca_nota):
     result = (preco_produto/quantidade_produto)
     result = result + (result*(diferenca_nota/100))
     return result
 
-apresentation()
+print('Bem-vindo ao programa que calcula o valor real da nota e dos produtos')
+input('\nPressione <enter> para continuar.')
 
 while True:
     
+    apresentation()
+
     total_produtos = input('\ninsira o valor total dos produtos: ')
     exitProgram(total_produtos)
     total_nota = input('Insira o valor total da nota: ')
@@ -43,6 +52,7 @@ while True:
     result = resultCalculation(total_produtos, total_nota)
 
     if result == None:
+        apresentation()
         continue
     else:
         if result < 0:
