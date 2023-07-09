@@ -23,10 +23,6 @@ def resultCalculation(valor_produtos, valor_nota):
             print('\nNão houve desconto ou acréscimo nessa nota.')
             input('\nPressione <enter> para continuar.')
             return
-    except ValueError:
-        print('\nAo invés da vírgula use o ponto, "," -> "."')
-        input('\nPressione <enter> para continuar.')
-        return 
     except Exception:
         print('\nErro desconhecido.')
         input('\nPressione <enter> para continuar.')
