@@ -44,9 +44,9 @@ while True:
     
     apresentation()
 
-    total_produtos = input('\ninsira o valor total dos produtos: ')
+    total_produtos = input('\ninsira o valor total dos produtos: ').replace(',','.')
     exitProgram(total_produtos)
-    total_nota = input('Insira o valor total da nota: ')
+    total_nota = input('Insira o valor total da nota: ').replace(',','.')
     exitProgram(total_nota)
 
     result = resultCalculation(total_produtos, total_nota)
